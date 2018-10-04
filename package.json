@@ -1,5 +1,5 @@
 {
-  "name": "macos-dark-mode",
+  "name": "mojave-dark-mode",
   "main": "./lib/main",
   "version": "0.0.0",
   "author": "Payson Wallach",
@@ -12,7 +12,7 @@
     "atom"
   ],
   "activationCommands": {},
-  "repository": "https://github.com/paysonwallach/macos-dark-mode",
+  "repository": "https://github.com/paysonwallach/mojave-dark-mode",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

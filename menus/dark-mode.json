@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle macos-dark-mode",
+        "command": "macos-dark-mode:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "macos-dark-mode",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "macos-dark-mode:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

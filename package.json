@@ -29,13 +29,11 @@
             "description": "UI and syntax theme for light mode",
             "type": "string",
             "default": "one-light-ui one-light-syntax"
-        },
-        "automaticMode": {
-            "order": 3,
-            "description": "Automatically apply theme based on system apperance",
-            "type": "boolean",
-            "default": "false"
         }
     },
-    "dependencies": {}
+    "dependencies": {},
+    "devDependencies": {
+        "@types/atom": "^1.31.0",
+        "typescript": "^3.1.2"
+    }
 }

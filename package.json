@@ -1,41 +1,41 @@
 {
-  "name": "mojave-dark-mode",
-  "main": "./lib/main",
-  "version": "0.0.0",
-  "author": "Payson Wallach",
-  "description": "Dark Mode support for macOS Mojave.",
-  "keywords": [
-    "dark mode",
-    "themes",
-    "switch",
-    "macOS",
-    "atom"
-  ],
-  "activationCommands": {},
-  "repository": "https://github.com/paysonwallach/mojave-dark-mode",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "configSchema": {
-      "darkProfile": {
-          "order": 1,
-          "description": "UI and syntax theme for dark mode",
-          "type": "string",
-          "default": "one-dark-ui one-dark-syntax"
-      },
-      "lightProfile": {
-          "order": 2,
-          "description": "UI and syntax theme for light mode",
-          "type": "string",
-          "default": "one-light-ui one-light-syntax"
-      },
-      "automaticMode": {
-          "order": 3,
-          "description": "Automatically apply theme based on system apperance",
-          "type": "boolean",
-          "default": "false"
-      }
-  },
-  "dependencies": {}
+    "name": "mojave-dark-mode",
+    "main": "./lib/main",
+    "version": "0.1.0",
+    "author": "Payson Wallach",
+    "description": "Dark Mode support for macOS Mojave.",
+    "keywords": [
+        "dark mode",
+        "themes",
+        "switch",
+        "macOS",
+        "atom"
+    ],
+    "activationCommands": {},
+    "repository": "https://github.com/paysonwallach/mojave-dark-mode",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "configSchema": {
+        "darkProfile": {
+            "order": 1,
+            "description": "UI and syntax theme for dark mode",
+            "type": "string",
+            "default": "one-dark-ui one-dark-syntax"
+        },
+        "lightProfile": {
+            "order": 2,
+            "description": "UI and syntax theme for light mode",
+            "type": "string",
+            "default": "one-light-ui one-light-syntax"
+        },
+        "automaticMode": {
+            "order": 3,
+            "description": "Automatically apply theme based on system apperance",
+            "type": "boolean",
+            "default": "false"
+        }
+    },
+    "dependencies": {}
 }

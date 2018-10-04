@@ -13,7 +13,7 @@ $ apm install dark-mode
 Enable/disable automatic theme switching in settings or the command palette:
 `Dark Mode: Enable automatic theme switching` or `Dark Mode: Disable automatic theme switching`
 
-You can also switch themes manually (Disables automatic theme switching) using `ctrl + \`` or choosing `Dark Mode: Toggle theme` in the command palette.
+You can also switch themes manually (Disables automatic theme switching) using `ctrl + `` ``` or choosing `Dark Mode: Toggle theme` in the command palette.
 
 ## Configuration
 

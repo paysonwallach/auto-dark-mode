@@ -21,11 +21,11 @@ Add your preferred light and dark UI and syntax themes as shown in settings, or 
 
 ## Contribution
 
-Pull requests are welcome! Be sure to also update the [changelog](https://raw.githubusercontent.com/paysonwallach/mojave-dark-mode/master/CHANGELOG.md).
+Pull requests are welcome! Be sure to also update the [changelog](https://github.com/paysonwallach/mojave-dark-mode/blob/master/CHANGELOG.md).
 
 ## License
 
-This project is licensed under the permissive [ISC license](https://raw.githubusercontent.com/paysonwallach/mojave-dark-mode/master/LICENSE).
+This project is licensed under the permissive [ISC license](https://github.com/paysonwallach/mojave-dark-mode/blob/master/LICENSE).
 
 ## Attributions
 

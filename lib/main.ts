@@ -19,13 +19,9 @@ export default {
         return atom.config.get('core.themes').join(' ');
     },
 
-    get state() {
-        return atom.config.get('mojave-dark-mode.automaticMode');
-    },
-
     activate() {
         subscriptions.add(atom.commands.add('atom-workspace', {
-            'dark-mode:toggle': () => this.toggle()
+            'Dark Mode:toggle': () => this.toggle()
         }));
 
         if (systemPreferences.isDarkMode()) {
@@ -45,7 +41,6 @@ export default {
     toggle() {
         let next = (this.currentTheme == this.darkTheme ? this.lightTheme : this.darkTheme);
 
-        atom.config.set('mojave-dark-mode.automaticMode', false);
         return this._changeTheme(next);
     },
 
@@ -68,4 +63,4 @@ export default {
     _changeTheme(theme = '') {
         atom.config.set('core.themes', theme.split(' '));
     }
-};
+}

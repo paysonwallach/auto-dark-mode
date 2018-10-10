@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.2] – 2018-10-10
+
+### Fixed
+– Typescript is fun
+
 ## [0.2.1] – 2018-10-10
 
 ### Fixed

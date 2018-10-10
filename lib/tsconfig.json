@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "forceConsistentCasingInFileNames": true,
+        "module": "commonjs",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "../dist",
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "strict": true,
+        "target": "es2017",
+        "typeRoots": [
+            "../node_modules/@types"
+        ]
+    },
+    "compileOnSave": true
+}

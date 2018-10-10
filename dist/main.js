@@ -1,11 +1,9 @@
-"use strict";
 'use babel';
-Object.defineProperty(exports, "__esModule", { value: true });
-const atom_1 = require("atom");
+import { CompositeDisposable } from 'atom';
 const { systemPreferences } = require('electron').remote;
 const notificationsOptions = { icon: 'light-bulb' };
-const subscriptions = new atom_1.CompositeDisposable();
-exports.default = {
+const subscriptions = new CompositeDisposable();
+export default {
     get lightTheme() {
         return atom.config.get('mojave-dark-mode.lightProfile');
     },
@@ -15,12 +13,9 @@ exports.default = {
     get currentTheme() {
         return atom.config.get('core.themes').join(' ');
     },
-    get state() {
-        return atom.config.get('mojave-dark-mode.automaticMode');
-    },
     activate() {
         subscriptions.add(atom.commands.add('atom-workspace', {
-            'dark-mode:toggle': () => this.toggle()
+            'Dark Mode:toggle': () => this.toggle()
         }));
         if (systemPreferences.isDarkMode()) {
             this.onDark();
@@ -35,7 +30,6 @@ exports.default = {
     },
     toggle() {
         let next = (this.currentTheme == this.darkTheme ? this.lightTheme : this.darkTheme);
-        atom.config.set('mojave-dark-mode.automaticMode', false);
         return this._changeTheme(next);
     },
     onLight() {

@@ -1,6 +1,6 @@
 {
     "name": "mojave-dark-mode",
-    "main": "./lib/main",
+    "main": "./dist/main",
     "version": "0.2.0",
     "author": "Payson Wallach",
     "description": "Dark Mode support for macOS Mojave.",

@@ -2,7 +2,7 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle dark-mode",
+        "label": "Toggle Dark Mode",
         "command": "dark-mode:toggle"
       }
     ]
@@ -12,10 +12,10 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "dark-mode",
+          "label": "Dark Mode",
           "submenu": [
             {
-              "label": "Toggle themes",
+              "label": "Toggle",
               "command": "dark-mode:toggle"
             }
           ]

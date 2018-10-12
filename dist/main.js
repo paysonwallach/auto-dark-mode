@@ -22,7 +22,7 @@ function changeTheme(theme = '') {
 exports.changeTheme = changeTheme;
 function activate() {
     subscriptions.add(atom.commands.add('atom-workspace', {
-        'Dark Mode:toggle': () => this.toggle()
+        'dark-mode:toggle': () => this.toggle()
     }));
     if (systemPreferences.isDarkMode()) {
         this.onDark();

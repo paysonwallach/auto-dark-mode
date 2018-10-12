@@ -1,66 +1,68 @@
-'use babel';
+import { CompositeDisposable } from 'atom'
 
-import { CompositeDisposable } from 'atom';
+const { systemPreferences } = require('electron').remote
+const notificationsOptions = { icon: 'light-bulb' }
+const subscriptions = new CompositeDisposable()
 
-const { systemPreferences } = require('electron').remote;
-const notificationsOptions = { icon: 'light-bulb' };
-const subscriptions = new CompositeDisposable();
+export function lightTheme(): string {
+    return atom.config.get('mojave-dark-mode.lightProfile')
+}
 
-export default {
-    get lightTheme() {
-        return atom.config.get('mojave-dark-mode.lightProfile');
-    },
+export function darkTheme(): string {
+    return atom.config.get('mojave-dark-mode.darkProfile')
+}
 
-    get darkTheme() {
-        return atom.config.get('mojave-dark-mode.darkProfile');
-    },
+export function currentTheme(): string {
+    return atom.config.get('core.themes').join(' ')
+}
 
-    get currentTheme() {
-        return atom.config.get('core.themes').join(' ');
-    },
+export function changeTheme(theme: string = '') {
+    atom.config.set('core.themes', theme.split(' '))
+}
 
-    activate() {
-        subscriptions.add(atom.commands.add('atom-workspace', {
-            'Dark Mode:toggle': () => this.toggle()
-        }));
+export function activate() {
+    subscriptions.add(atom.commands.add('atom-workspace', {
+        'Dark Mode:toggle': () => this.toggle()
+    }));
 
-        if (systemPreferences.isDarkMode()) {
-            this.onDark();
-        } else {
-            this.onLight();
-        }
+    if (systemPreferences.isDarkMode()) {
+        this.onDark()
+    } else {
+        this.onLight()
+    }
 
-        systemPreferences.subscribeNotification(
-            'AppleInterfaceThemeChangedNotification', this.toggle.bind(this));
-    },
+    systemPreferences.subscribeNotification(
+        'AppleInterfaceThemeChangedNotification', this.toggle.bind(this))
+}
 
-    deactivate() {
-        subscriptions.dispose();
-    },
+export function deactivate() {
+    subscriptions.dispose()
+}
 
-    toggle() {
-        let next = (this.currentTheme == this.darkTheme ? this.lightTheme : this.darkTheme);
+export function toggle() {
+    const lightTheme = this.lightTheme()
+    const darkTheme = this.darkTheme()
+    let next: string = (this.currentTheme() == darkTheme ? lightTheme : darkTheme)
 
-        return this._changeTheme(next);
-    },
+    return this.changeTheme(next)
+}
 
-    onLight() {
-        if (this.currentTheme != this.lightTheme) {
-            this._changeTheme(this.lightTheme);
-            atom.notifications.addSuccess(
-                'Dark Mode: Switched to light theme', notificationsOptions);
-        }
-    },
+export function onLight() {
+    const lightTheme = this.lightTheme()
 
-    onDark() {
-        if (this.currentTheme != this.darkTheme) {
-            this._changeTheme(this.darkTheme);
-            atom.notifications.addSuccess(
-                'Dark Mode: Switched to dark theme', notificationsOptions);
-        }
-    },
+    if (this.currentTheme() != lightTheme) {
+        this.changeTheme(lightTheme)
+        atom.notifications.addSuccess(
+            'Dark Mode: Switched to light theme', notificationsOptions)
+    }
+}
 
-    _changeTheme(theme = '') {
-        atom.config.set('core.themes', theme.split(' '));
+export function onDark() {
+    const darkTheme = this.darkTheme()
+
+    if (this.currentTheme() != darkTheme) {
+        this.changeTheme(darkTheme)
+        atom.notifications.addSuccess(
+            'Dark Mode: Switched to dark theme', notificationsOptions)
     }
 }

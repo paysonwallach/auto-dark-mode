@@ -21,16 +21,22 @@ function changeTheme(theme = '') {
 }
 exports.changeTheme = changeTheme;
 function activate() {
-    subscriptions.add(atom.commands.add('atom-workspace', {
-        'dark-mode:toggle': () => this.toggle()
-    }));
-    if (systemPreferences.isDarkMode()) {
-        this.onDark();
+    if (process.platform == "darwin") {
+        subscriptions.add(atom.commands.add('atom-workspace', {
+            'Dark Mode:toggle': () => this.toggle()
+        }));
+        if (systemPreferences.isDarkMode()) {
+            this.onDark();
+        }
+        else {
+            this.onLight();
+        }
+        systemPreferences.subscribeNotification('AppleInterfaceThemeChangedNotification', this.toggle.bind(this));
     }
     else {
-        this.onLight();
+        this.deactivate();
+        console.log("Mojave Dark Mode is only available on macOS");
     }
-    systemPreferences.subscribeNotification('AppleInterfaceThemeChangedNotification', this.toggle.bind(this));
 }
 exports.activate = activate;
 function deactivate() {

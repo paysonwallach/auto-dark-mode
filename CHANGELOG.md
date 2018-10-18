@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.4] – 2018-10-18
+
+### Fixed
+– Added process check for macOS
+
+## [0.2.3] – 2018-10-12
+
+### Updated
+– Menu items
+
 ## [0.2.2] – 2018-10-10
 
 ### Fixed

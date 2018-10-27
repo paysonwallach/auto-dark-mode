@@ -7,7 +7,7 @@ This package adds dark mode support for Atom on macOS 10.10+ with automatic them
 ## Installation
 Search for `mojave-dark-mode` in `Settings View: Install Packages and Themes` or:
 ```
-$ apm install dark-mode
+$ apm install mojave-dark-mode
 ```
 
 You can switch themes manually using `` ctrl + ` `` or choosing `Dark Mode: Toggle theme` in the command palette.

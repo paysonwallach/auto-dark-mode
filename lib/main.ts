@@ -21,10 +21,10 @@ export function changeTheme(theme: string = '') {
 }
 
 export function activate() {
-    if (process.platform == "darwin") {
+    if (process.platform == 'darwin') {
         subscriptions.add(atom.commands.add('atom-workspace', {
-            'Dark Mode:toggle': () => this.toggle()
-        }));
+            'dark-mode:toggle': () => this.toggle()
+        }))
 
         if (systemPreferences.isDarkMode()) {
             this.onDark()
@@ -37,7 +37,7 @@ export function activate() {
     } else {
         this.deactivate()
 
-        console.log("Mojave Dark Mode is only available on macOS")
+        console.log("Mojave Dark Mode is only compatible with macOS")
     }
 }
 

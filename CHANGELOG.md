@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] – 2019-09-18
+
+### Fixed
+– Theme does not toggle on system appearance change if it matches the new setting
+
+### Removed
+– Toggle option from context menu
+
 ## [0.2.5] – 2018-11-14
 
 ### Fixed

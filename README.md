@@ -8,7 +8,7 @@
     <img src=https://img.shields.io/apm/l/mojave-dark-mode.svg?style=flat-square>
   </a>
   <a href=https://buymeacoffee.com/paysonwallach>
-    <img src=https://img.shields.io/badge/donate-Buy%20me%20a%20coffe-yellow?style=flat-square>
+    <img src=https://img.shields.io/badge/donate-Buy%20me%20a%20coffee-yellow?style=flat-square>
   </a>
   <br>
   <br>
@@ -31,13 +31,13 @@ You can switch themes manually using `` ctrl + ` `` or choosing `Dark Mode: Togg
 
 ### Note:
 
-To get the title bar to change in older versions of Atom as well, add the `NSRequiresAquaSystemAppearance` key to Info.plist (Located in `/Applications/Atom.app/Contents`), and set to `false`.
+To get the title bar to change in older versions of Atom as well, add the `NSRequiresAquaSystemAppearance` key to `Info.plist` (located in `/Applications/Atom.app/Contents`), and set to `false`.
 
 ## Configuration
 
 Add your preferred light and dark UI and syntax themes as shown in settings, or in `config.cson`.
 
-## Contribution
+## Contributing
 
 Pull requests are welcome! Be sure to also update the [changelog](https://github.com/paysonwallach/mojave-dark-mode/blob/master/CHANGELOG.md).
 

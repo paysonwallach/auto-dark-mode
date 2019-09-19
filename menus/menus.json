@@ -16,7 +16,7 @@
           "submenu": [
             {
               "label": "Toggle",
-              "command": "dark-mode:toggle"
+              "command": "mojave-dark-mode:toggle"
             }
           ]
         }

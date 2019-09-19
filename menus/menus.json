@@ -1,12 +1,4 @@
 {
-  "context-menu": {
-    "atom-text-editor": [
-      {
-        "label": "Toggle Dark Mode",
-        "command": "dark-mode:toggle"
-      }
-    ]
-  },
   "menu": [
     {
       "label": "Packages",

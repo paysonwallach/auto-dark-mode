@@ -1,10 +1,10 @@
 <div align="center">
   <h1>Mojave Dark Mode</h1>
   <p>Dark Mode support for Atom on macOS</p>
-  <a href=https://github.com/paysonwallach/mojave-dark-mode/blob/master/LICENSE>
+  <a href=https://atom.io/packages/mojave-dark-mode>
     <img src=https://img.shields.io/apm/v/mojave-dark-mode.svg?style=flat-square>
   </a>
-  <a href=https://atom.io/packages/mojave-dark-mode>
+  <a href=https://github.com/paysonwallach/mojave-dark-mode/blob/master/LICENSE>
     <img src=https://img.shields.io/apm/l/mojave-dark-mode.svg?style=flat-square>
   </a>
   <a href=https://buymeacoffee.com/paysonwallach>

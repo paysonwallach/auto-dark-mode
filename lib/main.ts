@@ -20,39 +20,6 @@ export function changeTheme(theme: string = '') {
     atom.config.set('core.themes', theme.split(' '))
 }
 
-export function activate() {
-    if (process.platform == 'darwin') {
-        subscriptions.add(atom.commands.add('atom-workspace', {
-            'dark-mode:toggle': () => this.toggle()
-        }))
-
-        if (systemPreferences.isDarkMode()) {
-            this.onDark()
-        } else {
-            this.onLight()
-        }
-
-        systemPreferences.subscribeNotification(
-            'AppleInterfaceThemeChangedNotification', this.toggle.bind(this))
-    } else {
-        this.deactivate()
-
-        console.log("Mojave Dark Mode is only compatible with macOS")
-    }
-}
-
-export function deactivate() {
-    subscriptions.dispose()
-}
-
-export function toggle() {
-    const lightTheme = this.lightTheme()
-    const darkTheme = this.darkTheme()
-    let next: string = (this.currentTheme() == darkTheme ? lightTheme : darkTheme)
-
-    return this.changeTheme(next)
-}
-
 export function onLight() {
     const lightTheme = this.lightTheme()
 
@@ -71,4 +38,40 @@ export function onDark() {
         atom.notifications.addSuccess(
             'Dark Mode: Switched to dark theme', notificationsOptions)
     }
+}
+
+export function systemThemeDidChange() {
+    if (systemPreferences.isDarkMode()) {
+        this.onDark()
+    } else {
+        this.onLight()
+    }
+}
+
+export function toggle() {
+    const lightTheme = this.lightTheme()
+    const darkTheme = this.darkTheme()
+    let next: string = (this.currentTheme() == darkTheme ? lightTheme : darkTheme)
+
+    return this.changeTheme(next)
+}
+
+export function activate() {
+    if (process.platform == 'darwin') {
+        subscriptions.add(atom.commands.add('atom-workspace', {
+            'mojave-dark-mode:toggle': () => this.toggle()
+        }))
+        systemPreferences.subscribeNotification(
+            'AppleInterfaceThemeChangedNotification', this.systemThemeDidChange.bind(this))
+
+        this.systemThemeDidChange()
+    } else {
+        this.deactivate()
+
+        console.log("mojave-dark-mode is only compatible with macOS 10.14+")
+    }
+}
+
+export function deactivate() {
+    subscriptions.dispose()
 }

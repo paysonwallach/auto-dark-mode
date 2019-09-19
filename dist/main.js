@@ -25,19 +25,14 @@ function activate() {
     var _this = this;
     if (process.platform == 'darwin') {
         subscriptions.add(atom.commands.add('atom-workspace', {
-            'dark-mode:toggle': function () { return _this.toggle(); }
+            'mojave-dark-mode:toggle': function () { return _this.toggle(); }
         }));
-        if (systemPreferences.isDarkMode()) {
-            this.onDark();
-        }
-        else {
-            this.onLight();
-        }
-        systemPreferences.subscribeNotification('AppleInterfaceThemeChangedNotification', this.toggle.bind(this));
+        systemPreferences.subscribeNotification('AppleInterfaceThemeChangedNotification', this.systemThemeDidChange.bind(this));
+        this.systemThemeDidChange();
     }
     else {
         this.deactivate();
-        console.log("Mojave Dark Mode is only compatible with macOS");
+        console.log("mojave-dark-mode is only compatible with macOS 10.14+");
     }
 }
 exports.activate = activate;
@@ -45,6 +40,15 @@ function deactivate() {
     subscriptions.dispose();
 }
 exports.deactivate = deactivate;
+function systemThemeDidChange() {
+    if (systemPreferences.isDarkMode()) {
+        this.onDark();
+    }
+    else {
+        this.onLight();
+    }
+}
+exports.systemThemeDidChange = systemThemeDidChange;
 function toggle() {
     var lightTheme = this.lightTheme();
     var darkTheme = this.darkTheme();

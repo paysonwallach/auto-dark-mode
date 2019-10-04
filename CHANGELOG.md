@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.4.0] – 2019-10-04
+
+### Added
+– Preference to disable notification of theme changes
+
 ## [0.3.0] – 2019-09-18
 
 ### Fixed

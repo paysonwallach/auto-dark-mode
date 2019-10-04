@@ -25,8 +25,12 @@ export function onLight() {
 
     if (this.currentTheme() != lightTheme) {
         this.changeTheme(lightTheme)
-        atom.notifications.addSuccess(
-            'Dark Mode: Switched to light theme', notificationsOptions)
+        if (atom.config.get("mojave-dark-mode.notifyOnChange")) {
+            atom.notifications.addSuccess(
+                'Dark Mode: Switched to light theme',
+                 notificationsOptions
+             )
+        }
     }
 }
 
@@ -35,8 +39,12 @@ export function onDark() {
 
     if (this.currentTheme() != darkTheme) {
         this.changeTheme(darkTheme)
-        atom.notifications.addSuccess(
-            'Dark Mode: Switched to dark theme', notificationsOptions)
+        if (atom.config.get("mojave-dark-mode.notifyOnChange")) {
+            atom.notifications.addSuccess(
+                'Dark Mode: Switched to dark theme',
+                notificationsOptions
+            )
+        }
     }
 }
 

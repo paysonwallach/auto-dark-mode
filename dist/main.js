@@ -59,16 +59,20 @@ exports.toggle = toggle;
 function onLight() {
     var lightTheme = this.lightTheme();
     if (this.currentTheme() != lightTheme) {
-        this.changeTheme(lightTheme);
+      this.changeTheme(lightTheme);
+      if (atom.config.get("mojave-dark-mode.notifyOnChange")) {
         atom.notifications.addSuccess('Dark Mode: Switched to light theme', notificationsOptions);
+      }
     }
 }
 exports.onLight = onLight;
 function onDark() {
     var darkTheme = this.darkTheme();
     if (this.currentTheme() != darkTheme) {
-        this.changeTheme(darkTheme);
+      this.changeTheme(darkTheme);
+      if (atom.config.get("mojave-dark-mode.notifyOnChange")) {
         atom.notifications.addSuccess('Dark Mode: Switched to dark theme', notificationsOptions);
+      }
     }
 }
 exports.onDark = onDark;

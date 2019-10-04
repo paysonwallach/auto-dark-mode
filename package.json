@@ -29,11 +29,17 @@
             "description": "UI and syntax theme for light mode",
             "type": "string",
             "default": "one-light-ui one-light-syntax"
+        },
+        "notifyOnChange": {
+            "order": 3,
+            "description": "Send a notification when the theme is changed",
+            "type": "boolean",
+            "default": "true"
         }
     },
     "dependencies": {},
     "devDependencies": {
-        "@types/atom": "^1.31.0",
-        "typescript": "^3.1.2"
+        "@types/atom": "^1.36.1",
+        "typescript": "^3.6.3"
     }
 }

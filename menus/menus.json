@@ -8,7 +8,7 @@
           "submenu": [
             {
               "label": "Toggle",
-              "command": "mojave-dark-mode:toggle"
+              "command": "auto-dark-mode:toggle"
             }
           ]
         }

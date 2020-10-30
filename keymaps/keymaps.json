@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-`": "mojave-dark-mode:toggle"
+    "ctrl-`": "auto-dark-mode:toggle"
   }
 }

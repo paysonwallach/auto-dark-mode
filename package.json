@@ -1,9 +1,9 @@
 {
-    "name": "mojave-dark-mode",
-    "main": "./dist/main",
+    "name": "auto-dark-mode",
+    "main": "./lib/main",
     "version": "0.4.0",
     "author": "Payson Wallach",
-    "description": "Dark Mode support for macOS Mojave.",
+    "description": "Automatically switch light/dark theme upon system change",
     "keywords": [
         "dark mode",
         "themes",
@@ -15,7 +15,7 @@
     "repository": "https://github.com/paysonwallach/mojave-dark-mode",
     "license": "MIT",
     "engines": {
-        "atom": ">=1.0.0 <2.0.0"
+        "atom": ">=1.52.0 <2.0.0"
     },
     "configSchema": {
         "darkProfile": {
@@ -38,8 +38,5 @@
         }
     },
     "dependencies": {},
-    "devDependencies": {
-        "@types/atom": "^1.36.1",
-        "typescript": "^3.6.3"
-    }
+    "devDependencies": {}
 }

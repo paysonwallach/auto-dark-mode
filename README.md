@@ -1,11 +1,11 @@
 <div align="center">
-  <h1>Mojave Dark Mode</h1>
-  <p>Dark Mode support for Atom on macOS</p>
-  <a href=https://atom.io/packages/mojave-dark-mode>
-    <img src=https://img.shields.io/apm/v/mojave-dark-mode.svg?style=flat-square>
+  <h1>Auto Dark Mode</h1>
+  <p>Dark Mode support for Atom on all major platforms</p>
+  <a href=https://atom.io/packages/auto-dark-mode>
+    <img src=https://img.shields.io/apm/v/auto-dark-mode.svg?style=flat-square>
   </a>
-  <a href=https://github.com/paysonwallach/mojave-dark-mode/blob/master/LICENSE>
-    <img src=https://img.shields.io/apm/l/mojave-dark-mode.svg?style=flat-square>
+  <a href=https://github.com/paysonwallach/auto-dark-mode/blob/master/LICENSE>
+    <img src=https://img.shields.io/apm/l/auto-dark-mode.svg?style=flat-square>
   </a>
   <a href=https://buymeacoffee.com/paysonwallach>
     <img src=https://img.shields.io/badge/donate-Buy%20me%20a%20coffee-yellow?style=flat-square>
@@ -17,21 +17,22 @@
 
 ![Automatic theme switching](https://raw.githubusercontent.com/paysonwallach/mojave-dark-mode/master/automatic-theme-switching.gif)
 
-Mojave Dark Mode provides dark mode support for Atom on macOS 10.14+ with automatic theme switching based on the system appearance setting.
+
+Auto Dark Mode automatically toggles between a light and dark theme of your choice, 
+depending on the currently active system appearance setting.
+
+Automatic theme switching is **supported on all major platforms that feature a dark 
+mode** (e.g. macOS since Mojave, Windows since 10, and Ubuntu since 20.04).
 
 ## Installation
 
-Search for `mojave-dark-mode` in `Settings View: Install Packages and Themes` or:
+Search for `auto-dark-mode` in `Settings View: Install Packages and Themes` or:
 
 ```
-$ apm install mojave-dark-mode
+$ apm install auto-dark-mode
 ```
 
 You can switch themes manually using `` ctrl + ` `` or choosing `Dark Mode: Toggle theme` in the command palette.
-
-### Note:
-
-To get the title bar to change in older versions of Atom as well, add the `NSRequiresAquaSystemAppearance` key to `Info.plist` (located in `/Applications/Atom.app/Contents`), and set to `false`.
 
 ## Configuration
 
@@ -47,4 +48,4 @@ This project is licensed under the permissive [ISC license](https://github.com/p
 
 ## Attributions
 
-Mojave Dark Mode is inspired by [Exelord/dark-mode](https://github.com/Exelord/dark-mode).
+Auto Dark Mode is inspired by [Exelord/dark-mode](https://github.com/Exelord/dark-mode).

@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0] – 2020-30-10
+
+### Added
+– Support for Windows and Linux
+
+### Updated
+– Package renamed to 'auto-dark-mode'
+
 ## [0.4.0] – 2019-10-04
 
 ### Added

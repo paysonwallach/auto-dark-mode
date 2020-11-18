@@ -1,5 +1,5 @@
 {
-    "name": "auto-dark-mode",
+    "name": "mojave-dark-mode",
     "main": "./lib/main",
     "version": "0.4.0",
     "author": "Payson Wallach",
@@ -12,7 +12,7 @@
         "atom"
     ],
     "activationCommands": {},
-    "repository": "https://github.com/paysonwallach/mojave-dark-mode",
+    "repository": "https://github.com/paysonwallach/auto-dark-mode",
     "license": "MIT",
     "engines": {
         "atom": ">=1.52.0 <2.0.0"

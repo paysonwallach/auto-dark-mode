@@ -15,14 +15,12 @@
   <br>
 </div>
 
-![Automatic theme switching](https://raw.githubusercontent.com/paysonwallach/mojave-dark-mode/master/automatic-theme-switching.gif)
+![Automatic theme switching](https://raw.githubusercontent.com/paysonwallach/auto-dark-mode/master/automatic-theme-switching.gif)
 
 
-Auto Dark Mode automatically toggles between a light and dark theme of your choice, 
-depending on the currently active system appearance setting.
+Auto Dark Mode automatically toggles between a light and dark theme of your choice, depending on the currently active system appearance setting.
 
-Automatic theme switching is **supported on all major platforms that feature a dark 
-mode** (e.g. macOS since Mojave, Windows since 10, and Ubuntu since 20.04).
+Automatic theme switching is **supported on all major platforms that feature a dark mode** (e.g. macOS since Mojave, Windows since 10, and Ubuntu since 20.04).
 
 ## Installation
 
@@ -40,11 +38,11 @@ Add your preferred light and dark UI and syntax themes as shown in settings, or 
 
 ## Contributing
 
-Pull requests are welcome! Be sure to also update the [changelog](https://github.com/paysonwallach/mojave-dark-mode/blob/master/CHANGELOG.md).
+Pull requests are welcome! Be sure to also update the [changelog](https://github.com/paysonwallach/auto-dark-mode/blob/master/CHANGELOG.md).
 
 ## License
 
-This project is licensed under the permissive [ISC license](https://github.com/paysonwallach/mojave-dark-mode/blob/master/LICENSE).
+This project is licensed under the permissive [ISC license](https://github.com/paysonwallach/auto-dark-mode/blob/master/LICENSE).
 
 ## Attributions
 

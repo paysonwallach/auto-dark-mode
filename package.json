@@ -1,42 +1,42 @@
 {
-    "name": "mojave-dark-mode",
-    "main": "./lib/main",
-    "version": "0.4.0",
-    "author": "Payson Wallach",
-    "description": "Automatically switch light/dark theme upon system change",
-    "keywords": [
-        "dark mode",
-        "themes",
-        "switch",
-        "macOS",
-        "atom"
-    ],
-    "activationCommands": {},
-    "repository": "https://github.com/paysonwallach/auto-dark-mode",
-    "license": "MIT",
-    "engines": {
-        "atom": ">=1.52.0 <2.0.0"
+  "name": "auto-dark-mode",
+  "main": "./lib/main",
+  "version": "0.4.0",
+  "author": "Payson Wallach",
+  "description": "Automatically switch light/dark theme upon system change",
+  "keywords": [
+    "dark mode",
+    "themes",
+    "switch",
+    "macOS",
+    "atom"
+  ],
+  "activationCommands": {},
+  "repository": "https://github.com/paysonwallach/auto-dark-mode",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.52.0 <2.0.0"
+  },
+  "configSchema": {
+    "darkProfile": {
+      "order": 1,
+      "description": "UI and syntax theme for dark mode",
+      "type": "string",
+      "default": "one-dark-ui one-dark-syntax"
     },
-    "configSchema": {
-        "darkProfile": {
-            "order": 1,
-            "description": "UI and syntax theme for dark mode",
-            "type": "string",
-            "default": "one-dark-ui one-dark-syntax"
-        },
-        "lightProfile": {
-            "order": 2,
-            "description": "UI and syntax theme for light mode",
-            "type": "string",
-            "default": "one-light-ui one-light-syntax"
-        },
-        "notifyOnChange": {
-            "order": 3,
-            "description": "Send a notification when the theme is changed",
-            "type": "boolean",
-            "default": "true"
-        }
+    "lightProfile": {
+      "order": 2,
+      "description": "UI and syntax theme for light mode",
+      "type": "string",
+      "default": "one-light-ui one-light-syntax"
     },
-    "dependencies": {},
-    "devDependencies": {}
+    "notifyOnChange": {
+      "order": 3,
+      "description": "Send a notification when the theme is changed",
+      "type": "boolean",
+      "default": "true"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }

@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.6.0] – 2021-03-27
+
+### Fixed
+– Detect and change theme on startup
+
 ## [0.5.0] – 2020-30-10
 
 ### Added

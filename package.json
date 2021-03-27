@@ -1,7 +1,7 @@
 {
   "name": "auto-dark-mode",
   "main": "./lib/main",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "author": "Payson Wallach",
   "description": "Automatically switch light/dark theme upon system change",
   "keywords": [
